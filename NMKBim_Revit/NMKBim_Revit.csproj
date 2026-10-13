@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net10.0-windows</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>NMKBim_Revit</AssemblyName>
+    <RootNamespace>NMKBim_Revit</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Company>NMKBim</Company>
+    <Product>NMKBim Revit Extension Suite</Product>
+    <Description>Bộ công cụ trích xuất mô hình và thông số BIM sang định dạng JSON đa nền tảng</Description>
+  </PropertyGroup>
+
+  <!-- Cấu hình tham chiếu Revit API theo từng Target Framework -->
+  <Choose>
+    <!-- Cho Revit 2020 - 2024 (.NET Framework 4.8) -->
+    <When Condition="'$(TargetFramework)' == 'net48'">
+      <PropertyGroup>
+        <RevitPath Condition="Exists('C:\Program Files\Autodesk\Revit 2022')">C:\Program Files\Autodesk\Revit 2022</RevitPath>
+        <RevitPath Condition="'$(RevitPath)' == '' and Exists('C:\Program Files\Autodesk\Revit 2024')">C:\Program Files\Autodesk\Revit 2024</RevitPath>
+      </PropertyGroup>
+      <ItemGroup>
+        <PackageReference Include="System.Text.Json" Version="8.0.5" />
+        <Reference Include="RevitAPI">
+          <HintPath>$(RevitPath)\RevitAPI.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="RevitAPIUI">
+          <HintPath>$(RevitPath)\RevitAPIUI.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+
+    <!-- Cho Revit 2025 - 2027 (.NET 10.0) -->
+    <When Condition="'$(TargetFramework)' == 'net10.0-windows'">
+      <PropertyGroup>
+        <RevitPath Condition="Exists('C:\Program Files\Autodesk\Revit 2027')">C:\Program Files\Autodesk\Revit 2027</RevitPath>
+        <RevitPath Condition="'$(RevitPath)' == '' and Exists('C:\Program Files\Autodesk\Revit 2025')">C:\Program Files\Autodesk\Revit 2025</RevitPath>
+      </PropertyGroup>
+      <ItemGroup>
+        <Reference Include="RevitAPI">
+          <HintPath>$(RevitPath)\RevitAPI.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="RevitAPIUI">
+          <HintPath>$(RevitPath)\RevitAPIUI.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <ItemGroup>
+    <None Update="NMKBim_Revit.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

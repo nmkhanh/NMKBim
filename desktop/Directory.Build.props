@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <!-- Tránh lỗi Google Drive virtual filesystem locks khi ghi đè binaries hoặc apphost PE -->
+    <BaseIntermediateOutputPath>C:\Users\Admin\.gemini\build_cache\NMKBim\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Admin\.gemini\build_cache\NMKBim\$(MSBuildProjectName)\obj\$(Configuration)\</IntermediateOutputPath>
+    <BaseOutputPath>C:\Users\Admin\.gemini\build_cache\NMKBim\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <OutputPath>C:\Users\Admin\.gemini\build_cache\NMKBim\$(MSBuildProjectName)\bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+</Project>

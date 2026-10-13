@@ -1,0 +1,16 @@
+/* Reset styles cho Ứng dụng Toàn màn hình (Full-Viewport Application) */
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}

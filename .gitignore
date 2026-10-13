@@ -1,0 +1,37 @@
+# Visual Studio / .NET
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node / Web
+node_modules/
+node_modules_corrupt/
+dist/
+build/
+.npm
+*.log
+
+# Revit temporary / build files
+NMKBim_Revit/bin/
+NMKBim_Revit/obj/
+
+# Large shared sample models (> 100MB / raw datasets)
+# Keep lightweight sample_building_block.json and Model.json if needed, or exclude large ones
+shared-samples/*.json
+!shared-samples/sample_building_block.json
+shared-samples/New folder/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~

@@ -1,0 +1,136 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "name": "BIM Multi-Story Column and Beam Sample",
+    "units": "m",
+    "upAxis": "Z"
+  },
+  "materials": {
+    "mat_concrete": {
+      "id": "mat_concrete",
+      "name": "Concrete C30/37",
+      "color": "#94a3b8",
+      "opacity": 1.0,
+      "roughness": 0.8,
+      "metalness": 0.1
+    },
+    "mat_steel": {
+      "id": "mat_steel",
+      "name": "Structural Steel S355",
+      "color": "#38bdf8",
+      "opacity": 1.0,
+      "roughness": 0.3,
+      "metalness": 0.7
+    },
+    "mat_brick": {
+      "id": "mat_brick",
+      "name": "Masonry Red Brick",
+      "color": "#f87171",
+      "opacity": 1.0,
+      "roughness": 0.9,
+      "metalness": 0.0
+    }
+  },
+  "objects": [
+    {
+      "id": "col-001",
+      "name": "Column C1 (Cột Bê Tông)",
+      "materialId": "mat_concrete",
+      "vertices": [
+        -0.5, -0.5, 0.0,
+         0.5, -0.5, 0.0,
+         0.5,  0.5, 0.0,
+        -0.5,  0.5, 0.0,
+        -0.5, -0.5, 3.0,
+         0.5, -0.5, 3.0,
+         0.5,  0.5, 3.0,
+        -0.5,  0.5, 3.0
+      ],
+      "indices": [
+        0, 1, 2,  0, 2, 3,
+        4, 6, 5,  4, 7, 6,
+        0, 4, 5,  0, 5, 1,
+        1, 5, 6,  1, 6, 2,
+        2, 6, 7,  2, 7, 3,
+        3, 7, 4,  3, 4, 0
+      ],
+      "properties": {
+        "Category": "Structural Column",
+        "Section": "500x500 mm",
+        "Height": "3.0 m",
+        "Volume": "0.75 m³",
+        "Material": "Concrete C30/37",
+        "Level": "Level 1",
+        "Fire Rating": "R90 (90 mins)",
+        "Load Capacity": "2500 kN",
+        "Status": "Approved"
+      }
+    },
+    {
+      "id": "beam-001",
+      "name": "Beam B1 (Dầm Thép)",
+      "materialId": "mat_steel",
+      "vertices": [
+         0.5, -0.2, 2.6,
+         3.5, -0.2, 2.6,
+         3.5,  0.2, 2.6,
+         0.5,  0.2, 2.6,
+         0.5, -0.2, 3.0,
+         3.5, -0.2, 3.0,
+         3.5,  0.2, 3.0,
+         0.5,  0.2, 3.0
+      ],
+      "indices": [
+        0, 1, 2,  0, 2, 3,
+        4, 6, 5,  4, 7, 6,
+        0, 4, 5,  0, 5, 1,
+        1, 5, 6,  1, 6, 2,
+        2, 6, 7,  2, 7, 3,
+        3, 7, 4,  3, 4, 0
+      ],
+      "properties": {
+        "Category": "Structural Framing / Beam",
+        "Profile": "HEA 300",
+        "Length": "3.0 m",
+        "Weight": "264 kg",
+        "Material": "Steel S355",
+        "Level": "Level 1 Top",
+        "Deflection Limit": "L/360",
+        "Status": "Fabricated"
+      }
+    },
+    {
+      "id": "wall-001",
+      "name": "Wall W1 (Tường Gạch Chắn)",
+      "materialId": "mat_brick",
+      "vertices": [
+        -2.5, -0.5, 0.0,
+        -0.5, -0.5, 0.0,
+        -0.5, -0.3, 0.0,
+        -2.5, -0.3, 0.0,
+        -2.5, -0.5, 2.8,
+        -0.5, -0.5, 2.8,
+        -0.5, -0.3, 2.8,
+        -2.5, -0.3, 2.8
+      ],
+      "indices": [
+        0, 1, 2,  0, 2, 3,
+        4, 6, 5,  4, 7, 6,
+        0, 4, 5,  0, 5, 1,
+        1, 5, 6,  1, 6, 2,
+        2, 6, 7,  2, 7, 3,
+        3, 7, 4,  3, 4, 0
+      ],
+      "properties": {
+        "Category": "Basic Wall",
+        "Thickness": "200 mm",
+        "Length": "2.0 m",
+        "Height": "2.8 m",
+        "Area": "5.6 m²",
+        "Material": "Red Clay Brick",
+        "Acoustic Rating": "48 dB",
+        "Thermal Resistance": "0.35 m²K/W"
+      }
+    }
+  ]
+}

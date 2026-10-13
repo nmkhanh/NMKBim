@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>NMKBim_Revit</Name>
+    <Assembly>NMKBim_Revit.dll</Assembly>
+    <FullClassName>NMKBim_Revit.App</FullClassName>
+    <ClientId>A182F571-0857-4C3D-889E-758CEF40B345</ClientId>
+    <VendorId>NMKBIM</VendorId>
+    <VendorDescription>NMKBim High-Performance BIM Solutions</VendorDescription>
+  </AddIn>
+</RevitAddIns>

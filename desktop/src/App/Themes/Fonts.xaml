@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Phông chữ Arial chuẩn cho toàn bộ Desktop App -->
+    <FontFamily x:Key="AppFontFamily">Arial</FontFamily>
+    
+    <!-- 3 CỠ CHỮ DUY NHẤT CHO TOÀN ỨNG DỤNG: TITLE (24), HEADER (20), BODY (14) -->
+    <sys:Double x:Key="FontSizeTitle">24</sys:Double>
+    <sys:Double x:Key="FontSizeHeader">20</sys:Double>
+    <sys:Double x:Key="FontSizeBody">14</sys:Double>
+
+    <Style TargetType="Control" x:Key="BaseControlFontStyle">
+        <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="TitleTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeTitle}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="HeaderTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeHeader}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="BodyTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource AppFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeBody}"/>
+    </Style>
+</ResourceDictionary>

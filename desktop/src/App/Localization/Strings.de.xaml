@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Str_AppTitle">3D Hochleistungs-Modell-Viewer (WPF)</system:String>
+    <system:String x:Key="Str_OpenFile">Datei öffnen...</system:String>
+    <system:String x:Key="Str_LoadedFilesTitle">GELADENE MODELLDATEIEN</system:String>
+    <system:String x:Key="Str_NoFilesLoaded">Keine Dateien geladen. Klicken Sie auf Datei öffnen.</system:String>
+    <system:String x:Key="Str_ObjectsListTitle">SZENENELEMENTE</system:String>
+    <system:String x:Key="Str_View3D">3D-Perspektive</system:String>
+    <system:String x:Key="Str_ViewTop">Grundriss (Oben)</system:String>
+    <system:String x:Key="Str_ViewSection">Schnittansicht</system:String>
+    <system:String x:Key="Str_PropsTitle">ELEMENTEIGENSCHAFTEN</system:String>
+    <system:String x:Key="Str_PropsNoSelection">Kein Element ausgewählt. Klicken zum Prüfen.</system:String>
+    <system:String x:Key="Str_ColName">Eigenschaft</system:String>
+    <system:String x:Key="Str_ColValue">Wert</system:String>
+    <system:String x:Key="Str_SectionBoxTitle">Schnittbox (6 Ebenen)</system:String>
+    <system:String x:Key="Str_SectionBoxEnable">Schnitt aktivieren</system:String>
+    <system:String x:Key="Str_ObjectsCount">Geladene Objekte:</system:String>
+
+    <!-- Context Menu Strings -->
+    <system:String x:Key="Str_MenuIsolate">Element isolieren</system:String>
+    <system:String x:Key="Str_MenuHide">Element ausblenden</system:String>
+    <system:String x:Key="Str_MenuReset">Sichtbarkeit zurücksetzen</system:String>
+    <system:String x:Key="Str_MenuZoom">Auf Auswahl zoomen</system:String>
+</ResourceDictionary>

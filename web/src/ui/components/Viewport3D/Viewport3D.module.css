@@ -1,0 +1,179 @@
+.viewportContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: none;
+  cursor: grab;
+  transition: background-color var(--transition-fast);
+  border: 1px solid var(--color-border);
+}
+
+.viewportContainer:active {
+  cursor: grabbing;
+}
+
+.viewTitleBadge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.selectionBoxOverlay {
+  position: absolute;
+  border: 1px dashed #38bdf8;
+  background-color: rgba(56, 189, 248, 0.15);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.contextMenu {
+  position: fixed;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 100;
+  min-width: 180px;
+  animation: fadeIn 0.1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.menuItem {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  color: var(--color-text-main);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.menuItem:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-primary);
+}
+
+.menuItemAccent {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.menuItemAccent:hover {
+  background-color: var(--color-primary-bg);
+}
+
+.menuDivider {
+  height: 1px;
+  background-color: var(--color-border-subtle);
+  margin: 4px 0;
+}
+
+.measureToolbar {
+  position: absolute;
+  top: 10px;
+  right: 150px;
+  display: flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 3px 6px;
+  gap: 6px;
+  z-index: 20;
+  color: #fff;
+  font-size: var(--font-size-body);
+}
+
+.measureBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f1f5f9;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: var(--font-size-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.measureBtn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.measureBtnActive {
+  background: #38bdf8 !important;
+  color: #0f172a !important;
+  font-weight: 700;
+  border-color: #38bdf8;
+}
+
+.measureUnitSelect {
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: var(--font-size-body);
+  outline: none;
+  cursor: pointer;
+}
+
+.measureBadge {
+  position: absolute;
+  background: rgba(15, 23, 42, 0.9);
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  font-family: monospace;
+  pointer-events: none;
+  z-index: 25;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+

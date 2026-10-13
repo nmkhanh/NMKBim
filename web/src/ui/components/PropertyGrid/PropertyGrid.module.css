@@ -1,0 +1,248 @@
+.propertyContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-bg-surface);
+  border-left: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.header {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: var(--font-size-header);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.countBadge {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 12px;
+}
+
+.emptyState {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actionBar {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actionSectionTitle {
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.colorBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colorPicker {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.colorPreset {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.colorPreset:hover {
+  transform: scale(1.15);
+}
+
+.resetColorBtn {
+  font-size: var(--font-size-body);
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.resetColorBtn:hover {
+  color: var(--color-text-main);
+  border-color: var(--color-text-muted);
+}
+
+.groupRow {
+  display: flex;
+  gap: 6px;
+}
+
+.groupInput {
+  flex: 1;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: var(--font-size-body);
+  color: var(--color-text-main);
+}
+
+.groupInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.groupBtn {
+  font-size: var(--font-size-body);
+  padding: 4px 10px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.metaCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-body);
+}
+
+.metaLabel {
+  color: var(--color-text-muted);
+}
+
+.metaValue {
+  font-family: monospace;
+  color: var(--color-text-main);
+}
+
+.metaValueHighlight {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.propertyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-body);
+  text-align: left;
+}
+
+.propertyTable th {
+  padding: 8px 10px;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.colName {
+  width: 45%;
+}
+
+.colValue {
+  width: 55%;
+}
+
+.row {
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background-color var(--transition-fast);
+}
+
+.row:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.cellName {
+  padding: 7px 10px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.cellValue {
+  padding: 7px 10px;
+  color: var(--color-text-main);
+  font-family: monospace;
+}
+
+.variesBadge {
+  color: #f59e0b;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.groupsSection {
+  margin-top: 10px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 10px;
+}
+
+.groupItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  margin-top: 4px;
+  cursor: pointer;
+  font-size: var(--font-size-body);
+}
+
+.groupItem:hover {
+  border-color: var(--color-primary);
+}

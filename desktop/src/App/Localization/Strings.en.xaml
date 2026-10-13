@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Str_AppTitle">3D High-Performance Model Viewer (WPF)</system:String>
+    <system:String x:Key="Str_OpenFile">Select File...</system:String>
+    <system:String x:Key="Str_LoadedFilesTitle">LOADED MODEL FILES</system:String>
+    <system:String x:Key="Str_NoFilesLoaded">No files loaded yet. Click Select File above.</system:String>
+    <system:String x:Key="Str_ObjectsListTitle">SCENE ELEMENTS</system:String>
+    <system:String x:Key="Str_View3D">3D Perspective</system:String>
+    <system:String x:Key="Str_ViewTop">Top Plan</system:String>
+    <system:String x:Key="Str_ViewSection">Section Cut</system:String>
+    <system:String x:Key="Str_PropsTitle">ELEMENT PROPERTIES</system:String>
+    <system:String x:Key="Str_PropsNoSelection">No object selected. Click an object to inspect.</system:String>
+    <system:String x:Key="Str_ColName">Property Name</system:String>
+    <system:String x:Key="Str_ColValue">Value</system:String>
+    <system:String x:Key="Str_SectionBoxTitle">Section Box (6 Planes)</system:String>
+    <system:String x:Key="Str_SectionBoxEnable">Active Clipping</system:String>
+    <system:String x:Key="Str_ObjectsCount">Objects Loaded:</system:String>
+
+    <!-- Context Menu Strings -->
+    <system:String x:Key="Str_MenuIsolate">Isolate Element (Chỉ hiện đối tượng này)</system:String>
+    <system:String x:Key="Str_MenuHide">Hide Element (Ẩn đối tượng này)</system:String>
+    <system:String x:Key="Str_MenuReset">Reset Visibility (Hiện lại toàn bộ)</system:String>
+    <system:String x:Key="Str_MenuZoom">Zoom to Fit (Phóng vừa màn hình)</system:String>
+</ResourceDictionary>
